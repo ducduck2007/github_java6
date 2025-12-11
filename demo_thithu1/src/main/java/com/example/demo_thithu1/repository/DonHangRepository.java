@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DonHangRepository extends JpaRepository<DonHang, Long> {
+
+    boolean existsByMaDonHang(String maDonHang);
+
+    boolean existsByMaDonHangAndIdNot(String maDonHang, Long id);
 }

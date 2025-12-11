@@ -16,8 +16,6 @@ public class DonHangResponse {
     private Date ngayDat;
     private Double tongTien;
 
-
-    private Long idKhachHang;
     private String tenKhachHang;
     private String diaChi;
 
@@ -27,7 +25,6 @@ public class DonHangResponse {
         this.maDonHang = dh.getMaDonHang();
         this.ngayDat = dh.getNgayDat();
         this.tongTien = dh.getTongTien();
-        this.idKhachHang = dh.getKhachHang().getId();
         this.tenKhachHang = dh.getKhachHang().getTenKhachHang();
         this.diaChi = dh.getKhachHang().getDiaChi();
     }
