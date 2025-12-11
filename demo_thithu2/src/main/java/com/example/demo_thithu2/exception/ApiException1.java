@@ -1,6 +1,6 @@
-package com.example.demo_thithu1.exception;
+package com.example.demo_thithu2.exception;
 
-public class ApiException1 extends RuntimeException {
+public class ApiException1 extends RuntimeException{
 
     private final String code;
 
@@ -14,3 +14,4 @@ public class ApiException1 extends RuntimeException {
         return code;
     }
 }
+

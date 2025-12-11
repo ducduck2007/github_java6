@@ -12,17 +12,17 @@ import java.util.List;
 public interface DichVuSuDungRepository extends JpaRepository<DichVuSuDung, Integer> {
 
     @Query("""
-        SELECT new com.example.demo.model.response.DichVuSuDungResponse(
-            dvsd.id,
-            dvsd.ma,
-            dv.ma,
-            dvsd.soLuong,
-            dvsd.ngayTao,
-            dvsd.trangThai
-        )
-        FROM DichVuSuDung dvsd
-        JOIN DichVu dv ON dv.id = dvsd.dichVuId
-    """)
+                SELECT new com.example.demo.model.response.DichVuSuDungResponse(
+                    dvsd.id,
+                    dvsd.ma,
+                    dv.ma,
+                    dvsd.soLuong,
+                    dvsd.ngayTao,
+                    dvsd.trangThai
+                )
+                FROM DichVuSuDung dvsd
+                JOIN DichVu dv ON dv.id = dvsd.dichVuId
+            """)
     List<DichVuSuDungResponse> getAllDichVuSuDung();
 }
 

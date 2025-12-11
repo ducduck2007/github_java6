@@ -1,4 +1,4 @@
-package com.example.demo.exception;
+package com.example.demo_thithu2.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestControllerAdvice
-public class GlobalExceptionHandle {
+public class GlobalExceptionHandel {
+    // handle cac truong hop exception(xay ra loi)
+    // 400: valid
+    // 500: logic
+    // con lai
     // Bắt lỗi validate @Valid
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<?> handleValidationErrors(MethodArgumentNotValidException ex) {
@@ -27,8 +31,8 @@ public class GlobalExceptionHandle {
     }
 
     // Bắt lỗi do bạn tự throw new ApiException
-    @ExceptionHandler(ApiException.class)
-    public ResponseEntity<?> handleApiException(ApiException ex) {
+    @ExceptionHandler(ApiException1.class)
+    public ResponseEntity<?> handleApiException(ApiException1 ex) {
         Map<String, Object> response = new HashMap<>();
         response.put("status", "FAILED");
         response.put("code", ex.getCode());
